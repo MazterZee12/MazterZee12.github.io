@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- GANTI: judul dan deskripsi (muncul di tab browser dan hasil pencarian) -->
+<title>Rio Damanik | Portfolio</title>
+<meta name="description" content="Portfolio of Rio Damanik, web developer and data enthusiast.">
+
+<!-- Terapkan tema sebelum render supaya tidak berkedip -->
+<script>
+(function () {
+  var t;
+  try { t = localStorage.getItem("theme"); } catch (e) {}
+  if (t !== "light" && t !== "dark") {
+    t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  document.documentElement.setAttribute("data-theme", t);
+  document.documentElement.className = "js";
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ikon SVG inline -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></symbol>
+</svg>
+
+<!-- ===================== LATAR (JANGAN DIUBAH) ===================== -->
+<div class="bg" aria-hidden="true">
+  <canvas id="gl"></canvas>
+  <div class="grid"></div>
+  <canvas id="stars"></canvas>
+</div>
+<!-- ================================================================= -->
+
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="nav">
+  <div class="nav-in">
+    <!-- GANTI: nama/logo singkat -->
+    <a class="logo" href="#home" aria-label="Home">Rio Damanik<span>.</span></a>
+
+    <nav id="navLinks" class="links" aria-label="Main">
+      <a href="#home" data-i18n="nav_home">Home</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#skills" data-i18n="nav_skills">Skills</a>
+      <a href="#projects" data-i18n="nav_projects">Projects</a>
+      <a href="#certifications" data-i18n="nav_certs">Certifications</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+
+    <div class="ctrl">
+      <label class="sr" for="langSelect">Language</label>
+      <select id="langSelect">
+        <option value="en">EN</option>
+        <option value="id">ID</option>
+      </select>
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">
+        <svg class="ic ic-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="ic ic-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <button id="burger" class="icon-btn burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="sec hero">
+    <div class="wrap">
+      <div class="panel hero-panel reveal">
+        <p class="hello" data-i18n="hero_hello">Hello, I'm</p>
+        <!-- GANTI: nama lengkap -->
+        <h1>Rio Damanik</h1>
+        <!-- GANTI: peran satu baris (ubah juga di script.js: hero_role) -->
+        <p class="role" data-i18n="hero_role">Fullstack Developer | Data Enthusiast | Programmer</p>
+        <p class="typing"><span data-i18n="hero_into">I'm into</span> <strong id="typed"></strong><span class="caret" aria-hidden="true"></span></p>
+
+        <div class="actions">
+          <a class="btn primary" href="#projects" data-i18n="btn_projects">View Projects</a>
+          <!-- GANTI: taruh file cv.pdf di folder yang sama dengan index.html -->
+          <a class="btn ghost" href="RioDamanikCV.pdf" download><svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg><span data-i18n="btn_cv">Download CV</span></a>
+        </div>
+
+        <ul class="social" aria-label="Social links">
+          <!-- GANTI: semua link sosial di bawah -->
+          <li><a href="https://www.linkedin.com/in/rio-damanik" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic" aria-hidden="true"><use href="#i-in"/></svg></a></li>
+          <li><a href="https://github.com/MazterZee12" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg></a></li>
+          <li><a href="https://www.instagram.com/riodamanix?xtok=MXhndXFiaDRkN29kcQ==" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+          <li><a href="https://wa.me/6282182234016" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="sec">
+    <div class="wrap">
+      <div class="panel reveal">
+        <h2 data-i18n="about_title">About</h2>
+        <div class="about">
+          <!-- GANTI: ganti div ini dengan <img src="foto.jpg" alt="Your Full Name"> bila sudah ada foto -->
+          <div><img class="avatar" src="Rio.jpg" alt="Your Full Name"></div>
+          <div>
+            <h3>Rio Damanik</h3>
+            <p class="muted" data-i18n="about_role">Web Developer | Data Enthusiast</p>
+            <p data-i18n="about_desc">Write a short paragraph about yourself here.</p>
+            <dl class="facts">
+              <!-- GANTI: isi data diri -->
+              <div><dt data-i18n="lbl_age">Age</dt><dd>19</dd></div>
+              <div><dt data-i18n="lbl_location">Location</dt><dd>Medan, Indonesia</dd></div>
+              <div><dt data-i18n="lbl_study">Study</dt><dd>D3 Information Technology, IT Del</dd></div>
+              <div><dt data-i18n="lbl_email">Email</dt><dd>mazterzee@gmail.com</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="sec">
+      <div class="wrap">
+        <div class="panel reveal">
+          <h2 data-i18n="skills_title">Skills</h2>
+          <!-- GANTI: sesuaikan tag dengan keahlianmu -->
+          <div class="skill-grid">
+            <div class="group">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="cat_lang">Languages</span></h3>
+              <ul class="tags"><li>Python</li><li>JavaScript</li><li>SQL</li><li>Java</li></ul>
+            </div>
+            <div class="group">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="cat_web">Web</span></h3>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>React</li><li>Node.js</li></ul>
+            </div>
+            <div class="group">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg><span data-i18n="cat_data">Data</span></h3>
+              <ul class="tags"><li>Pandas</li><li>Excel</li><li>Power BI</li><li>Matplotlib</li></ul>
+            </div>
+            <div class="group">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-tool"/></svg><span data-i18n="cat_tools">Tools</span></h3>
+              <ul class="tags"><li>Git</li><li>GitHub</li><li>VS Code</li><li>Figma</li></ul>
+            </div>
+            <!-- Terisi otomatis dari GitHub (isi GITHUB_USER di script.js). Tersembunyi selama belum diisi. -->
+            <div class="group wide" id="ghGroup" hidden>
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg><span data-i18n="cat_gh">From GitHub</span></h3>
+              <ul class="tags gh" id="ghTags"></ul>
+              <p class="muted small" id="ghNote" role="status"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="sec">
+    <div class="wrap">
+      <div class="panel reveal">
+        <h2 data-i18n="projects_title">Projects</h2>
+        <div class="cards">
+
+          <!-- GANTI: tiap kartu (gambar, judul, deskripsi di script.js p1-p4, tag, link Live dan Code) -->
+          <article class="card">
+            <!-- GANTI: ganti div.media dengan <img class="media" src="img/project1.jpg" alt="Screenshot of Project One"> -->
+            <div class="media m1" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Project One</h3>
+              <p data-i18n="p1">Project description.</p>
+              <ul class="tags"><li>Python</li><li>Pandas</li><li>Streamlit</li></ul>
+              <div class="actions sm">
+                <a class="btn primary" href="https://example.com" target="_blank" rel="noopener" data-i18n="btn_live">Live</a>
+                <a class="btn ghost" href="https://github.com/YOUR_GITHUB_USERNAME/project-one" target="_blank" rel="noopener" data-i18n="btn_code">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media m2" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Project Two</h3>
+              <p data-i18n="p2">Project description.</p>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="actions sm">
+                <a class="btn primary" href="https://example.com" target="_blank" rel="noopener" data-i18n="btn_live">Live</a>
+                <a class="btn ghost" href="https://github.com/YOUR_GITHUB_USERNAME/project-two" target="_blank" rel="noopener" data-i18n="btn_code">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media m3" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Project Three</h3>
+              <p data-i18n="p3">Project description.</p>
+              <ul class="tags"><li>React</li><li>Node.js</li><li>MySQL</li></ul>
+              <div class="actions sm">
+                <a class="btn primary" href="https://example.com" target="_blank" rel="noopener" data-i18n="btn_live">Live</a>
+                <a class="btn ghost" href="https://github.com/YOUR_GITHUB_USERNAME/project-three" target="_blank" rel="noopener" data-i18n="btn_code">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media m4" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Project Four</h3>
+              <p data-i18n="p4">Project description.</p>
+              <ul class="tags"><li>JavaScript</li><li>Canvas</li></ul>
+              <div class="actions sm">
+                <a class="btn primary" href="https://example.com" target="_blank" rel="noopener" data-i18n="btn_live">Live</a>
+                <a class="btn ghost" href="https://github.com/YOUR_GITHUB_USERNAME/project-four" target="_blank" rel="noopener" data-i18n="btn_code">Code</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION & CERTIFICATIONS ===================== -->
+  <section id="certifications" class="sec">
+    <div class="wrap">
+      <div class="panel reveal">
+        <h2 data-i18n="certs_title">Education &amp; Certifications</h2>
+        <div class="two">
+          <div>
+            <h3 data-i18n="edu_title">Education</h3>
+            <ul class="list">
+              <!-- GANTI: teks pendidikan ada di script.js (edu1, edu2) -->
+              <li data-i18n="edu1">Education one</li>
+              <li data-i18n="edu2">Education two</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="cert_title">Certifications</h3>
+            <ul class="list">
+              <!-- GANTI: teks sertifikat ada di script.js (cert1-cert3) -->
+              <li data-i18n="cert1">Certification one</li>
+              <li data-i18n="cert2">Certification two</li>
+              <li data-i18n="cert3">Certification three</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="sec">
+    <div class="wrap">
+      <div class="panel reveal">
+        <h2 data-i18n="contact_title">Get in touch</h2>
+        <div class="two">
+          <div>
+            <p data-i18n="contact_desc">Open to internships, collaborations, and new projects. Send a message and I'll reply soon.</p>
+            <div class="actions">
+              <!-- GANTI: email dan LinkedIn -->
+              <a class="btn primary" href="mailto:mazterzee@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><span data-i18n="btn_email">Email me</span></a>
+              <a class="btn ghost" href="https://www.linkedin.com/in/rio-damanik" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-in"/></svg><span>LinkedIn</span></a>
+            </div>
+          </div>
+          <form id="contactForm">
+            <label for="cName" data-i18n="f_name">Name</label>
+            <input id="cName" type="text" autocomplete="name" required>
+            <label for="cEmail" data-i18n="f_email">Email</label>
+            <input id="cEmail" type="email" autocomplete="email" required>
+            <label for="cMsg" data-i18n="f_msg">Message</label>
+            <textarea id="cMsg" rows="4" required></textarea>
+            <button class="btn primary" type="submit" data-i18n="btn_send">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-box">
+      <div class="foot-brand">
+        <!-- GANTI: inisial/nama singkat -->
+        <a class="logo" href="#home" aria-label="Home">Rio Damanik<span>.</span></a>
+        <p class="muted" data-i18n="foot_text">Thanks for visiting my portfolio. Connect with me on social media.</p>
+      </div>
+
+      <nav class="foot-col" aria-label="Footer">
+        <h3 data-i18n="foot_links">Quick links</h3>
+        <ul class="foot-links">
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#certifications" data-i18n="nav_certs">Certifications</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="foot-col">
+        <h3 data-i18n="foot_connect">Connect</h3>
+        <ul class="social" aria-label="Social links">
+          <!-- GANTI: link sosial, samakan dengan yang di hero -->
+          <li><a href="https://www.linkedin.com/in/rio-damanik" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic" aria-hidden="true"><use href="#i-in"/></svg></a></li>
+          <li><a href="https://github.com/MazterZee12" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic" aria-hidden="true"><use href="#i-gh"/></svg></a></li>
+          <li><a href="https://www.instagram.com/riodamanix?xtok=MXhndXFiaDRkN29kcQ==" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+          <li><a href="mailto:mazterzee@gmail.com" aria-label="Email"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p class="muted small">&copy; <span id="year"></span> Rio Damanik</p>
+      <a class="small" href="#home" data-i18n="foot_top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<!-- GANTI: nomor WhatsApp format internasional tanpa + atau 0 di depan (contoh Indonesia: 62812...) -->
+<a class="wa-float" href="https://wa.me/6282182234016" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
